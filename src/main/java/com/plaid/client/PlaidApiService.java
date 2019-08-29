@@ -25,6 +25,7 @@ import com.plaid.client.request.ItemAccessTokenInvalidateRequest;
 import com.plaid.client.request.ItemAccessTokenUpdateVersionRequest;
 import com.plaid.client.request.ItemApexProcessorTokenCreateRequest;
 import com.plaid.client.request.ItemDwollaProcessorTokenCreateRequest;
+import com.plaid.client.request.ItemOcrolusProcessorTokenCreateRequest;
 import com.plaid.client.request.ItemGetRequest;
 import com.plaid.client.request.ItemPublicTokenCreateRequest;
 import com.plaid.client.request.ItemPublicTokenExchangeRequest;
@@ -57,6 +58,7 @@ import com.plaid.client.response.ItemAccessTokenInvalidateResponse;
 import com.plaid.client.response.ItemAccessTokenUpdateVersionResponse;
 import com.plaid.client.response.ItemApexProcessorTokenCreateResponse;
 import com.plaid.client.response.ItemDwollaProcessorTokenCreateResponse;
+import com.plaid.client.response.ItemOcrolusProcessorTokenCreateResponse;
 import com.plaid.client.response.ItemGetResponse;
 import com.plaid.client.response.ItemPublicTokenCreateResponse;
 import com.plaid.client.response.ItemPublicTokenExchangeResponse;
@@ -95,6 +97,9 @@ public interface PlaidApiService {
 
   @POST("/processor/dwolla/processor_token/create")
   Call<ItemDwollaProcessorTokenCreateResponse> itemDwollaProcessorTokenCreate(@Body ItemDwollaProcessorTokenCreateRequest request);
+
+  @POST("/processor/ocrolus/processor_token/create")
+  Call<ItemOcrolusProcessorTokenCreateResponse> itemOcrolusProcessorTokenCreate(@Body ItemOcrolusProcessorTokenCreateRequest request);
 
   @POST("/item/access_token/invalidate")
   Call<ItemAccessTokenInvalidateResponse> itemAccessTokenInvalidate(@Body ItemAccessTokenInvalidateRequest request);
